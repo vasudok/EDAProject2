@@ -1,0 +1,5 @@
+baltimore <- subset(NEI, NEI$fips == 24510)
+baltpm25 <- c(sum(baltimore$Emissions[baltimore$year == 1999]), sum(baltimore$Emissions[baltimore$year == 2002]), sum(baltimore$Emissions[baltimore$year == 2005]), sum(baltimore$Emissions[baltimore$year == 2008]))
+png(filename = "/Users/vasudok/R Programming/Coursera R/EDAProject2/plot2.png")
+barplot(baltpm25, xlab = "Year", names.arg = c("1999", "2002", "2005", "2008"), ylab = "PM 2.5 emissions (tons)", main = "Total PM 2.5 Emissions Per Year in Baltimore")
+dev.off()
